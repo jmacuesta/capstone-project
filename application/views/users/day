@@ -1,0 +1,36 @@
+								<div class="col-md-4"><!-- start 4 columns -->
+									<select class="form-control" name="usersMonthOB" placeholder="Month" value="<?php echo set_value('usersMonthOB');?>">
+										<option value="" selected disabled>Month</option>
+										<?php
+											foreach($monthlist as $row)
+											{
+												echo '<option value="'.$row->month_name.'" '.set_select('usersMonthOB',$row->month_name).'>'.$row->month_name.'</option>';
+											}
+										?>
+									</select>
+									<?php echo form_error('usersMonthOB'); ?>
+								</div><!-- end 4 columns -->
+								<div class="col-md-4"><!-- start 4 columns -->
+									<select class="form-control" name="usersDayOB" placeholder="Day" value="<?php echo set_value('usersDayOB');?>">
+										<option value="" selected disabled>Day</option>
+										<?php
+											foreach($daylist as $row)
+											{
+												echo '<option value="'.$row->day_name.'" '.set_select('usersDayOB',$row->day_name).'>'.$row->day_name.'</option>';
+											}
+										?>
+									</select>
+									<?php echo form_error('usersDayOB'); ?>
+								</div><!-- end 4 columns -->
+								<div class="col-md-4"><!-- start 4 columns -->
+									<select class="form-control" name="usersYearOB" placeholder="Year" value="<?php echo set_value('usersYearOB');?>">
+										<option value="" selected disabled>Year</option>
+										<?php
+											foreach($yearlist as $row)
+											{
+												echo '<option value="'.$row->year_name.'" '.set_select('usersYearOB',$row->year_name).'>'.$row->year_name.'</option>';
+											}
+										?>
+									</select>
+									<?php echo form_error('usersYearOB'); ?>
+								</div><!-- end 4 columns -->

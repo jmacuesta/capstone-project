@@ -1,0 +1,13 @@
+if(isset($_SESSION['user_loggedin'])){
+            if($_SESSION['user_type']==1){
+                
+            }elseif($_SESSION['user_type']==2){
+                //redirect('moderator')
+            }elseif($_SESSION['user_type']==3){
+                redirect('UsersProfileController/index','location');
+            }else{
+                redirect('UsersController/login','location');
+            }
+        }else{
+            redirect('UsersController/login','location');
+        }
